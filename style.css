@@ -23,7 +23,6 @@ header{
     background:#0b7a35;
     color:#fff;
     padding:15px 20px;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -60,7 +59,6 @@ main{
     display:grid;
     grid-template-columns:420px 1fr;
     gap:20px;
-
     padding:20px;
 }
 
@@ -70,7 +68,6 @@ main{
     background:#fff;
     border-radius:10px;
     padding:20px;
-
     box-shadow:0 0 10px rgba(0,0,0,.08);
 }
 
@@ -107,129 +104,161 @@ main{
 #editorTable{
     width:100%;
     border-collapse:collapse;
+    table-layout:fixed;
 }
 
 #editorTable th,
 #editorTable td{
-
     border:1px solid #bbb;
-    padding:6px;
+    height:45px;
+    padding:4px;
 }
 
 #editorTable input{
-
     width:100%;
+    height:36px;
     border:none;
     outline:none;
     font-size:14px;
-    padding:5px;
+    text-align:center;
 }
 
 /* Preview */
 
 .previewPanel{
-
     background:#fff;
     border-radius:10px;
     padding:20px;
-
     overflow:auto;
-
     box-shadow:0 0 10px rgba(0,0,0,.08);
 }
 
 .previewPanel h2{
-
     margin-bottom:20px;
 }
 
 /* Sheet */
 
 #sheet{
-
     width:2480px;
-
     background:#fff;
-
     padding:80px;
-
     border:2px solid #000;
-
     transform:scale(.32);
-
     transform-origin:top left;
 }
 
 #headerImage{
-
     width:100%;
     display:block;
-
     margin-bottom:25px;
 }
 
-#sheet h3{
+/* GREEN ROOM SHEET */
 
+#sheet h3{
     text-align:center;
     font-size:52px;
-
-    margin-bottom:15px;
+    margin-bottom:20px;
 }
 
+/* EVENT NAME */
+
 #sheet h2{
-
-    text-align:center;
+    text-align:left;
     font-size:44px;
-
+    font-weight:bold;
     margin-bottom:35px;
 }
 
 /* Preview Table */
 
 #previewTable{
-
     width:100%;
-
     border-collapse:collapse;
+    table-layout:fixed;
+}
+
+/* Column Width */
+
+#previewTable th:nth-child(1),
+#previewTable td:nth-child(1){
+    width:90px;
+}
+
+#previewTable th:nth-child(2),
+#previewTable td:nth-child(2){
+    width:650px;
+    text-align:left;
+    padding-left:18px;
+}
+
+#previewTable th:nth-child(3),
+#previewTable td:nth-child(3){
+    width:130px;
+}
+
+#previewTable th:nth-child(4),
+#previewTable td:nth-child(4){
+    width:140px;
+}
+
+#previewTable th:nth-child(5),
+#previewTable td:nth-child(5){
+    width:140px;
+}
+
+#previewTable th:nth-child(6),
+#previewTable td:nth-child(6){
+    width:140px;
+}
+
+#previewTable th:nth-child(7),
+#previewTable td:nth-child(7){
+    width:160px;
+}
+
+#previewTable th:nth-child(8),
+#previewTable td:nth-child(8){
+    width:550px;
 }
 
 #previewTable th,
 #previewTable td{
-
     border:2px solid #000;
-
-    text-align:center;
-
-    padding:18px;
-
+    height:70px;
+    line-height:70px;
+    padding:0 10px;
     font-size:28px;
+    text-align:center;
+    vertical-align:middle;
 }
 
 #previewTable th{
-
     background:#ececec;
+    font-weight:bold;
+}
+
+/* Participants Left Align */
+
+#previewTable td:nth-child(2){
+    text-align:left;
 }
 
 /* Mobile */
 
 @media(max-width:900px){
 
-main{
+    main{
+        grid-template-columns:1fr;
+    }
 
-grid-template-columns:1fr;
+    .previewPanel{
+        overflow:auto;
+    }
 
-}
-
-.previewPanel{
-
-overflow:auto;
-
-}
-
-#sheet{
-
-transform:scale(.12);
-
-}
+    #sheet{
+        transform:scale(.12);
+    }
 
 }
