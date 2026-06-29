@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Room Sheet Generator</title>
 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Green Room Sheet Generator</h1>
+
+    <!-- Event Name -->
+    <div class="input-group">
+        <label>Event Name</label>
+        <input type="text" id="eventName" placeholder="LP PENCIL DRAWING">
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <button id="addRowBtn">+ Add Row</button>
+        <button id="generateBtn">Generate Image</button>
+    </div>
+
+    <!-- Preview -->
+    <div id="preview">
+
+        <img src="images/header.png" id="headerImage">
+
+        <h2>Green Room Sheet</h2>
+
+        <h3 id="previewEvent">LP PENCIL DRAWING</h3>
+
+        <table id="sheetTable">
+
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>PARTICIPANTS</th>
+                    <th>BLOCK</th>
+                    <th>CODE</th>
+                    <th>GRADE</th>
+                    <th>POINT</th>
+                    <th>PLACE</th>
+                    <th>SIGNATURE</th>
+                </tr>
+            </thead>
+
+            <tbody id="tableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
