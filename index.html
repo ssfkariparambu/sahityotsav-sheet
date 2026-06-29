@@ -1,43 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Room Sheet Generator</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Green Room Sheet Generator</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-<div class="container">
+<div class="app">
 
-    <h1>Green Room Sheet Generator</h1>
+    <!-- Top Bar -->
+    <header>
 
-    <!-- Event Name -->
-    <div class="input-group">
-        <label>Event Name</label>
-        <input type="text" id="eventName" placeholder="LP PENCIL DRAWING">
-    </div>
+        <h1>Green Room Sheet Generator</h1>
 
-    <!-- Buttons -->
-    <div class="buttons">
-        <button id="addRowBtn">+ Add Row</button>
-        <button id="generateBtn">Generate Image</button>
-    </div>
+        <div class="top-buttons">
+            <button id="uploadHeader">Upload Header</button>
+            <button id="generateBtn">Generate PNG</button>
+        </div>
 
-    <!-- Preview -->
-    <div id="preview">
+    </header>
 
-        <img src="images/header.png" id="headerImage">
+    <!-- Main Area -->
+    <main>
 
-        <h2>Green Room Sheet</h2>
+        <!-- Left Panel -->
+        <section class="editor">
 
-        <h3 id="previewEvent">LP PENCIL DRAWING</h3>
+            <h2>Editor</h2>
 
-        <table id="sheetTable">
+            <div class="form-group">
 
-            <thead>
+                <label>Event Name</label>
+
+                <input
+                    type="text"
+                    id="eventName"
+                    placeholder="LP PENCIL DRAWING">
+
+            </div>
+
+            <div class="toolbar">
+
+                <button id="addRow">
+                    + Add Row
+                </button>
+
+                <button id="removeRow">
+                    − Remove Row
+                </button>
+
+            </div>
+
+            <table id="editorTable">
+
+                <thead>
+
                 <tr>
+
                     <th>NO</th>
                     <th>PARTICIPANTS</th>
                     <th>BLOCK</th>
@@ -45,17 +70,68 @@
                     <th>GRADE</th>
                     <th>POINT</th>
                     <th>PLACE</th>
-                    <th>SIGNATURE</th>
+                    <th>SIGN</th>
+
                 </tr>
-            </thead>
 
-            <tbody id="tableBody">
+                </thead>
 
-            </tbody>
+                <tbody id="editorBody">
 
-        </table>
+                </tbody>
 
-    </div>
+            </table>
+
+        </section>
+
+        <!-- Right Panel -->
+        <section class="previewPanel">
+
+            <h2>Live Preview</h2>
+
+            <div id="sheet">
+
+                <img
+                    src="assets/header.png"
+                    id="headerImage"
+                    alt="Header">
+
+                <h3>GREEN ROOM SHEET</h3>
+
+                <h2 id="previewEvent">
+                    LP PENCIL DRAWING
+                </h2>
+
+                <table id="previewTable">
+
+                    <thead>
+
+                    <tr>
+
+                        <th>NO</th>
+                        <th>PARTICIPANTS</th>
+                        <th>BLOCK</th>
+                        <th>CODE</th>
+                        <th>GRADE</th>
+                        <th>POINT</th>
+                        <th>PLACE</th>
+                        <th>SIGNATURE</th>
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody id="previewBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
 
 </div>
 
