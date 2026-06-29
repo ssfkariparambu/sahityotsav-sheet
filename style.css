@@ -1,1 +1,107 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
 
+body{
+    background:#f3f3f3;
+    padding:20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.input-group{
+    margin-bottom:15px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+.input-group input{
+    width:100%;
+    padding:10px;
+    font-size:16px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+button{
+    padding:10px 18px;
+    font-size:16px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    background:#0a7b34;
+    color:#fff;
+}
+
+button:hover{
+    background:#066228;
+}
+
+/* Preview Sheet */
+
+#preview{
+    width:2480px;
+    background:#fff;
+    margin:auto;
+    padding:80px;
+    border:2px solid #000;
+    transform:scale(.35);
+    transform-origin:top center;
+}
+
+#headerImage{
+    width:100%;
+    display:block;
+    margin-bottom:25px;
+}
+
+#preview h2{
+    text-align:center;
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+#preview h3{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:30px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,
+td{
+    border:2px solid #000;
+    padding:18px;
+    text-align:center;
+    font-size:28px;
+}
+
+th{
+    background:#f1f1f1;
+    font-weight:bold;
+}
